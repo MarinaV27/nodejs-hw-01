@@ -3,8 +3,8 @@ import { PATH_DB } from '../constants/contacts.js';
 
 export const writeContacts = async (updatedContacts) => {
     try {
-        await fs.writeFale(PATH_DB, JSON.stringify(updatedContacts, null, 2));
+        await fs.writeFile(PATH_DB, JSON.stringify(updatedContacts, null, 2),'UTF-8');
     } catch (error) {
         console.error(error.message);
-    }
+    };
 };
